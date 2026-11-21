@@ -1,47 +1,99 @@
-// ALUMNO 6 - Filtros, contador de productos, ordenar por precio y carrito
+/* ======================= SCRIPT ALUMNO 6: ACCESORIOS ======================= */
 (() => {
-  const seccion = document.getElementById('accesorios');
-  const grid = document.getElementById('a6-grid');
-  const filtros = seccion.querySelectorAll('.filtro');
-  const cantidad = document.getElementById('a6-cantidad');
+  function initAccesorios() {
+    const seccion = document.getElementById('accesorios');
+    const grid = document.getElementById('a6-grid');
+    const selectOrden = document.getElementById('a6-orden');
+    const contador = document.getElementById('a6-cantidad');
 
-  function actualizarCantidad() {
-    const visibles = grid.querySelectorAll('.producto:not(.oculto)').length;
-    cantidad.textContent = visibles + (visibles === 1 ? ' producto' : ' productos');
+    if (!seccion || !grid || !selectOrden || !contador) {
+      return false;
+    }
+
+    if (seccion.dataset.a6Listo === 'true') {
+      return true;
+    }
+    seccion.dataset.a6Listo = 'true';
+
+    const botonesFiltro = seccion.querySelectorAll('.filtros .filtro');
+    const productos = Array.from(grid.querySelectorAll('.producto'));
+    let categoriaActiva = 'todo';
+
+    function actualizarContador(visibles) {
+      contador.textContent = `${visibles} ${visibles === 1 ? 'producto' : 'productos'}`;
+    }
+
+    function aplicarFiltrosYOrden() {
+      const criterio = selectOrden.value;
+
+      const ordenados = [...productos].sort((a, b) => {
+        if (criterio === 'menor') {
+          return parseFloat(a.dataset.precio) - parseFloat(b.dataset.precio);
+        }
+        if (criterio === 'mayor') {
+          return parseFloat(b.dataset.precio) - parseFloat(a.dataset.precio);
+        }
+        if (criterio === 'az') {
+          return a.dataset.nombre.localeCompare(b.dataset.nombre, 'es', { sensitivity: 'base' });
+        }
+        return parseInt(a.dataset.orden, 10) - parseInt(b.dataset.orden, 10);
+      });
+
+      let visibles = 0;
+
+      ordenados.forEach((producto) => {
+        const coincide =
+          categoriaActiva === 'todo' || producto.dataset.categoria === categoriaActiva;
+
+        producto.style.display = coincide ? '' : 'none';
+        if (coincide) {
+          visibles++;
+        }
+        grid.appendChild(producto);
+      });
+
+      actualizarContador(visibles);
+    }
+
+    botonesFiltro.forEach((boton) => {
+      boton.addEventListener('click', () => {
+        botonesFiltro.forEach((btn) => btn.classList.remove('activo'));
+        boton.classList.add('activo');
+        categoriaActiva = boton.dataset.filtro;
+        aplicarFiltrosYOrden();
+      });
+    });
+
+    selectOrden.addEventListener('change', aplicarFiltrosYOrden);
+
+    grid.addEventListener('click', (evento) => {
+      const botonAgregar = evento.target.closest('.btn-agregar');
+      if (!botonAgregar) return;
+
+      const tarjeta = botonAgregar.closest('.producto');
+      if (!tarjeta) return;
+
+      const nombre = tarjeta.dataset.nombre;
+      const precio = parseFloat(tarjeta.dataset.precio);
+
+      if (typeof agregarAlCarrito === 'function') {
+        agregarAlCarrito(nombre, precio);
+      }
+      if (typeof mostrarToast === 'function') {
+        mostrarToast(`"${nombre}" agregado al carrito`);
+      }
+    });
+
+    aplicarFiltrosYOrden();
+    return true;
   }
 
-  // ---------- 1. Filtrar ----------
-  filtros.forEach(boton => {
-    boton.addEventListener('click', () => {
-      filtros.forEach(b => b.classList.remove('activo'));
-      boton.classList.add('activo');
-      const categoria = boton.dataset.filtro;
-      grid.querySelectorAll('.producto').forEach(p => {
-        p.classList.toggle('oculto', categoria !== 'todo' && p.dataset.categoria !== categoria);
-      });
-      actualizarCantidad();
+  if (!initAccesorios()) {
+    const observer = new MutationObserver(() => {
+      if (initAccesorios()) {
+        observer.disconnect();
+      }
     });
-  });
-
-  // ---------- 2. Ordenar por precio ----------
-  document.getElementById('a6-orden').addEventListener('change', (e) => {
-    const opcion = e.target.value;
-    const lista = [...grid.querySelectorAll('.producto')];
-    lista.sort((a, b) => {
-      if (opcion === 'menor') return a.dataset.precio - b.dataset.precio;
-      if (opcion === 'mayor') return b.dataset.precio - a.dataset.precio;
-      return a.dataset.orden - b.dataset.orden;
-    });
-    lista.forEach(p => grid.appendChild(p)); // los vuelve a colocar en el nuevo orden
-  });
-
-  // ---------- 3. Agregar al carrito ----------
-  seccion.querySelectorAll('.btn-agregar').forEach(boton => {
-    boton.addEventListener('click', () => {
-      const producto = boton.closest('.producto');
-      agregarAlCarrito(producto.dataset.nombre, producto.dataset.precio);
-    });
-  });
-
-  actualizarCantidad();
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
 })();

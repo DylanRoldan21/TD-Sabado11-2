@@ -3,122 +3,199 @@
   <div class="contenedor">
     <p class="eyebrow">Complementa tu look</p>
     <h2 class="titulo-seccion">Accesorios y calzado</h2>
-    <p class="subtitulo-seccion">Zapatillas, bolsos, gorras y relojes para completar tu estilo.</p>
+    <p class="subtitulo-seccion">Zapatillas, bolsos, gorras, relojes y lentes para hombre, mujer y niños.</p>
 
     <div class="a6-barra">
-    <div class="filtros">
-      <button class="filtro activo" data-filtro="todo">Todo</button>
-      <button class="filtro" data-filtro="zapatillas">Zapatillas</button>
-      <button class="filtro" data-filtro="bolsos">Bolsos</button>
-      <button class="filtro" data-filtro="gorras">Gorras</button>
-      <button class="filtro" data-filtro="relojes">Relojes</button>
-    </div>
+      <div class="filtros">
+        <button class="filtro activo" data-filtro="todo">Todo</button>
+        <button class="filtro" data-filtro="zapatillas">Zapatillas</button>
+        <button class="filtro" data-filtro="bolsos">Bolsos</button>
+        <button class="filtro" data-filtro="gorras">Gorras</button>
+        <button class="filtro" data-filtro="relojes">Relojes</button>
+        <button class="filtro" data-filtro="lentes">Lentes de sol</button>
+      </div>
+
       <div class="a6-orden">
-        <span class="a6-cantidad" id="a6-cantidad">8 productos</span>
+        <span class="a6-cantidad" id="a6-cantidad">14 productos</span>
         <select id="a6-orden" aria-label="Ordenar productos">
           <option value="normal">Ordenar: destacados</option>
           <option value="menor">Precio: menor a mayor</option>
           <option value="mayor">Precio: mayor a menor</option>
+          <option value="az">Nombre: A-Z</option>
         </select>
       </div>
     </div>
 
-    <!--
-      CÓMO EDITAR UN PRODUCTO (cada <article> es un producto):
-        data-nombre   = nombre que se guarda en el carrito
-        data-precio   = precio SOLO con números y punto (ej: 49.90)
-        data-categoria= debe ser IGUAL al data-filtro de un botón de arriba
-      El nombre y el precio también se escriben en el texto visible (h3 y p).
-      Para agregar un producto: copia un <article> completo y pégalo debajo.
-    -->
-    <!-- data-orden = posición original (1, 2, 3...). Si agregas productos, sigue la numeración. -->
     <div class="grid-productos" id="a6-grid">
-      <article class="producto" data-categoria="zapatillas" data-nombre="Zapatillas Urbanas Blancas" data-precio="199.90" data-orden="1">
+      <!-- ZAPATILLAS (Hombre, Mujer, Niños) -->
+      <article class="producto" data-categoria="zapatillas" data-nombre="Zapatillas Urbanas Blancas Unisex" data-precio="199.90" data-orden="1">
         <div class="producto-foto">
-          <img src="img/alumno6/accesorio1.svg" alt="Zapatillas Urbanas Blancas">
-          <span class="producto-etiqueta">NUEVO</span>
+          <img src="img/alumno6/accesorio1.jpg.jpg" alt="Zapatillas Urbanas Blancas Unisex">
+          <span class="producto-etiqueta">UNISEX</span>
         </div>
         <div class="producto-info">
-          <h3 class="producto-nombre">Zapatillas Urbanas Blancas</h3>
+          <h3 class="producto-nombre">Zapatillas Urbanas Blancas Unisex</h3>
           <p class="producto-precio">S/ 199.90</p>
           <button class="btn-agregar">Agregar al carrito</button>
         </div>
       </article>
 
-      <article class="producto" data-categoria="zapatillas" data-nombre="Zapatillas Running" data-precio="229.90" data-orden="2">
+      <article class="producto" data-categoria="zapatillas" data-nombre="Zapatillas Running Hombre" data-precio="229.90" data-orden="2">
         <div class="producto-foto">
-          <img src="img/alumno6/accesorio2.svg" alt="Zapatillas Running">
+          <img src="img/alumno6/accesorio2.jpg.jpg" alt="Zapatillas Running Hombre">
+          <span class="producto-etiqueta">HOMBRE</span>
         </div>
         <div class="producto-info">
-          <h3 class="producto-nombre">Zapatillas Running</h3>
+          <h3 class="producto-nombre">Zapatillas Running Hombre</h3>
           <p class="producto-precio">S/ 229.90</p>
           <button class="btn-agregar">Agregar al carrito</button>
         </div>
       </article>
 
-      <article class="producto" data-categoria="bolsos" data-nombre="Bolso Tote de Cuero" data-precio="149.90" data-orden="3">
+      <article class="producto" data-categoria="zapatillas" data-nombre="Zapatillas Plataforma Mujer" data-precio="209.90" data-orden="3">
         <div class="producto-foto">
-          <img src="img/alumno6/accesorio3.svg" alt="Bolso Tote de Cuero">
+          <img src="img/alumno6/accesorio3.jpg.jpg" alt="Zapatillas Plataforma Mujer">
+          <span class="producto-etiqueta">MUJER</span>
         </div>
         <div class="producto-info">
-          <h3 class="producto-nombre">Bolso Tote de Cuero</h3>
+          <h3 class="producto-nombre">Zapatillas Plataforma Mujer</h3>
+          <p class="producto-precio">S/ 209.90</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="zapatillas" data-nombre="Zapatillas Luces LED Niños" data-precio="139.90" data-orden="4">
+        <div class="producto-foto">
+          <img src="img/alumno6/accesorio4.jpg.jpg" alt="Zapatillas Luces LED Niños">
+          <span class="producto-etiqueta">NIÑOS</span>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Zapatillas Luces LED Niños</h3>
+          <p class="producto-precio">S/ 139.90</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <!-- BOLSOS Y MOCHILAS (Mujer, Hombre, Niños) -->
+      <article class="producto" data-categoria="bolsos" data-nombre="Bolso Tote de Cuero Mujer" data-precio="159.90" data-orden="5">
+        <div class="producto-foto">
+          <img src="img/alumno6/accesorio5.jpg.jpg" alt="Bolso Tote de Cuero Mujer">
+          <span class="producto-etiqueta">MUJER</span>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Bolso Tote de Cuero Mujer</h3>
+          <p class="producto-precio">S/ 159.90</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="bolsos" data-nombre="Mochila Ejecutiva Hombre" data-precio="149.90" data-orden="6">
+        <div class="producto-foto">
+          <img src="img/alumno6/accesorio6.jpg.jpg" alt="Mochila Ejecutiva Hombre">
+          <span class="producto-etiqueta">HOMBRE</span>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Mochila Ejecutiva Hombre</h3>
           <p class="producto-precio">S/ 149.90</p>
           <button class="btn-agregar">Agregar al carrito</button>
         </div>
       </article>
 
-      <article class="producto" data-categoria="bolsos" data-nombre="Mochila Urbana" data-precio="119.90" data-orden="4">
+      <article class="producto" data-categoria="bolsos" data-nombre="Mochila Escolar Dinosaurio Niños" data-precio="89.90" data-orden="7">
         <div class="producto-foto">
-          <img src="img/alumno6/accesorio4.svg" alt="Mochila Urbana">
-          <span class="producto-etiqueta">TOP</span>
+          <img src="img/alumno6/accesorio7.jpg.jpg" alt="Mochila Escolar Dinosaurio Niños">
+          <span class="producto-etiqueta">NIÑOS</span>
         </div>
         <div class="producto-info">
-          <h3 class="producto-nombre">Mochila Urbana</h3>
-          <p class="producto-precio">S/ 119.90</p>
+          <h3 class="producto-nombre">Mochila Escolar Dinosaurio Niños</h3>
+          <p class="producto-precio">S/ 89.90</p>
           <button class="btn-agregar">Agregar al carrito</button>
         </div>
       </article>
 
-      <article class="producto" data-categoria="gorras" data-nombre="Gorra Snapback" data-precio="49.90" data-orden="5">
+      <!-- GORRAS (Hombre, Mujer, Niños) -->
+      <article class="producto" data-categoria="gorras" data-nombre="Gorra Snapback Negra Hombre" data-precio="49.90" data-orden="8">
         <div class="producto-foto">
-          <img src="img/alumno6/accesorio5.svg" alt="Gorra Snapback">
+          <img src="img/alumno6/accesorio8.jpg.jpg" alt="Gorra Snapback Negra Hombre">
+          <span class="producto-etiqueta">HOMBRE</span>
         </div>
         <div class="producto-info">
-          <h3 class="producto-nombre">Gorra Snapback</h3>
+          <h3 class="producto-nombre">Gorra Snapback Negra Hombre</h3>
           <p class="producto-precio">S/ 49.90</p>
           <button class="btn-agregar">Agregar al carrito</button>
         </div>
       </article>
 
-      <article class="producto" data-categoria="gorras" data-nombre="Gorro de Lana" data-precio="39.90" data-orden="6">
+      <article class="producto" data-categoria="gorras" data-nombre="Visera Deportiva Pastel Mujer" data-precio="45.90" data-orden="9">
         <div class="producto-foto">
-          <img src="img/alumno6/accesorio6.svg" alt="Gorro de Lana">
+          <img src="img/alumno6/accesorio9.jpg.jpg" alt="Visera Deportiva Pastel Mujer">
+          <span class="producto-etiqueta">MUJER</span>
         </div>
         <div class="producto-info">
-          <h3 class="producto-nombre">Gorro de Lana</h3>
-          <p class="producto-precio">S/ 39.90</p>
+          <h3 class="producto-nombre">Visera Deportiva Pastel Mujer</h3>
+          <p class="producto-precio">S/ 45.90</p>
           <button class="btn-agregar">Agregar al carrito</button>
         </div>
       </article>
 
-      <article class="producto" data-categoria="relojes" data-nombre="Reloj Clásico Plateado" data-precio="249.90" data-orden="7">
+      <article class="producto" data-categoria="gorras" data-nombre="Gorra Estampada Infantil Niños" data-precio="35.90" data-orden="10">
         <div class="producto-foto">
-          <img src="img/alumno6/accesorio7.svg" alt="Reloj Clásico Plateado">
+          <img src="img/alumno6/accesorio10.jpg.jpg" alt="Gorra Estampada Infantil Niños">
+          <span class="producto-etiqueta">NIÑOS</span>
         </div>
         <div class="producto-info">
-          <h3 class="producto-nombre">Reloj Clásico Plateado</h3>
+          <h3 class="producto-nombre">Gorra Estampada Infantil Niños</h3>
+          <p class="producto-precio">S/ 35.90</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <!-- RELOJES (Hombre, Mujer) -->
+      <article class="producto" data-categoria="relojes" data-nombre="Reloj Clásico Acero Hombre" data-precio="249.90" data-orden="11">
+        <div class="producto-foto">
+          <img src="img/alumno6/accesorio11.jpg.jpg" alt="Reloj Clásico Acero Hombre">
+          <span class="producto-etiqueta">HOMBRE</span>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Reloj Clásico Acero Hombre</h3>
           <p class="producto-precio">S/ 249.90</p>
           <button class="btn-agregar">Agregar al carrito</button>
         </div>
       </article>
 
-      <article class="producto" data-categoria="relojes" data-nombre="Reloj Deportivo" data-precio="189.90" data-orden="8">
+      <article class="producto" data-categoria="relojes" data-nombre="Reloj Minimalista Dorado Mujer" data-precio="219.90" data-orden="12">
         <div class="producto-foto">
-          <img src="img/alumno6/accesorio8.svg" alt="Reloj Deportivo">
+          <img src="img/alumno6/accesorio12.jpg.jpg" alt="Reloj Minimalista Dorado Mujer">
+          <span class="producto-etiqueta">MUJER</span>
         </div>
         <div class="producto-info">
-          <h3 class="producto-nombre">Reloj Deportivo</h3>
-          <p class="producto-precio">S/ 189.90</p>
+          <h3 class="producto-nombre">Reloj Minimalista Dorado Mujer</h3>
+          <p class="producto-precio">S/ 219.90</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <!-- LENTES DE SOL (Reto extra: 2 productos) -->
+      <article class="producto" data-categoria="lentes" data-nombre="Lentes de Sol Aviador Unisex" data-precio="89.90" data-orden="13">
+        <div class="producto-foto">
+          <img src="img/alumno6/accesorio13.jpg.jpg" alt="Lentes de Sol Aviador Unisex">
+          <span class="producto-etiqueta">UNISEX</span>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Lentes de Sol Aviador Unisex</h3>
+          <p class="producto-precio">S/ 89.90</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="lentes" data-nombre="Lentes de Sol Flexibles Niños" data-precio="44.90" data-orden="14">
+        <div class="producto-foto">
+          <img src="img/alumno6/accesorio14.jpg.jpg" alt="Lentes de Sol Flexibles Niños">
+          <span class="producto-etiqueta">NIÑOS</span>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Lentes de Sol Flexibles Niños</h3>
+          <p class="producto-precio">S/ 44.90</p>
           <button class="btn-agregar">Agregar al carrito</button>
         </div>
       </article>
