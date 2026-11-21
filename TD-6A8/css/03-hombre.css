@@ -1,8 +1,157 @@
-/* ALUMNO 3 - Hombre. Usa SOLO clases que empiecen con .a3- */
-.a3-seccion { background: var(--blanco); }
+/* ======================= URBAN KICKS - ESTILOS PRO ======================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Botones de talla */
-.a3-tallas { display: flex; gap: 6px; }
-.a3-tallas button { width: 36px; height: 34px; border: 1px solid var(--borde); background: #fff; border-radius: 6px; cursor: pointer; font-size: .8rem; transition: .2s; }
-.a3-tallas button:hover { border-color: var(--negro); }
-.a3-tallas button.activo { background: var(--negro); color: #fff; border-color: var(--negro); }
+:root {
+  --a3-blanco: #ffffff;
+  --a3-negro: #0a0a0a;
+  --a3-gris-fondo: #f8f9fa;
+  --a3-borde: #e5e5e5;
+  --a3-texto: #1a1a1a;
+  --a3-texto-suave: #6b7280;
+  --a3-radio: 12px;
+  --a3-sombra: 0 10px 30px rgba(0,0,0,0.08);
+  --a3-transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.a3-seccion {
+  background: var(--a3-blanco);
+  padding: 60px 20px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--a3-texto);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tipografía y Títulos */
+.a3-seccion .eyebrow { text-align: center; color: var(--a3-texto-suave); text-transform: uppercase; letter-spacing: 4px; font-size: 0.75rem; font-weight: 600; margin-bottom: 10px; }
+.a3-seccion .titulo-seccion { text-align: center; font-size: 2.5rem; font-weight: 700; margin: 0 0 12px; letter-spacing: -1px; }
+.a3-seccion .subtitulo-seccion { text-align: center; color: var(--a3-texto-suave); margin-bottom: 50px; font-size: 1.05rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+
+/* Toolbar */
+.a3-toolbar { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: center; margin-bottom: 20px; }
+.a3-search { position: relative; display: flex; align-items: center; background: var(--a3-gris-fondo); border: 1px solid var(--a3-borde); border-radius: 30px; padding: 0 16px; transition: all var(--a3-transition); }
+.a3-search:focus-within { border-color: var(--a3-negro); box-shadow: 0 0 0 3px rgba(0,0,0,0.05); }
+.a3-search svg { color: var(--a3-texto-suave); margin-right: 8px; }
+.a3-search input { border: none; background: transparent; padding: 12px 0; min-width: 200px; font-size: 0.9rem; outline: none; font-family: inherit; }
+.a3-filtros { display: flex; flex-wrap: wrap; gap: 8px; }
+.a3-filtro { padding: 10px 22px; border: 1px solid var(--a3-borde); background: #fff; border-radius: 30px; cursor: pointer; font-size: 0.85rem; font-weight: 500; transition: all var(--a3-transition); font-family: inherit; }
+.a3-filtro:hover { border-color: var(--a3-negro); }
+.a3-filtro.activo { background: var(--a3-negro); color: #fff; border-color: var(--a3-negro); }
+.a3-controles { display: flex; gap: 10px; }
+.a3-controles select { padding: 10px 16px; border: 1px solid var(--a3-borde); border-radius: 30px; background: #fff; font-size: 0.85rem; cursor: pointer; outline: none; font-family: inherit; color: var(--a3-texto); }
+.a3-contador { text-align: center; font-size: 0.85rem; color: var(--a3-texto-suave); margin-bottom: 40px; }
+
+/* Grid y Tarjetas */
+.a3-grid-productos { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 32px; max-width: 1280px; margin: 0 auto; }
+.a3-producto { background: #fff; border: 1px solid var(--a3-borde); border-radius: var(--a3-radio); overflow: hidden; display: flex; flex-direction: column; transition: transform var(--a3-transition), box-shadow var(--a3-transition); cursor: pointer; position: relative; }
+.a3-producto:hover { transform: translateY(-8px); box-shadow: var(--a3-sombra); }
+.a3-producto.oculto { display: none; }
+
+/* Imagen */
+.a3-producto-foto { position: relative; overflow: hidden; background: var(--a3-gris-fondo); }
+.a3-producto-foto img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; transition: transform 0.6s ease; }
+.a3-producto:hover .a3-producto-foto img { transform: scale(1.06); }
+.a3-etiqueta { position: absolute; top: 14px; left: 14px; background: var(--a3-negro); color: #fff; font-size: 0.7rem; font-weight: 700; padding: 6px 12px; border-radius: 20px; letter-spacing: 0.5px; z-index: 2; }
+
+/* Info */
+.a3-producto-info { padding: 20px; display: flex; flex-direction: column; flex: 1; }
+.a3-nombre { font-size: 1.05rem; font-weight: 600; margin: 0 0 8px; line-height: 1.3; }
+.a3-precio { font-size: 1.15rem; font-weight: 700; margin: 0; color: var(--a3-negro); }
+
+/* ===== MODAL ===== */
+.a3-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.65); opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; z-index: 1000; backdrop-filter: blur(4px); }
+.a3-modal-overlay.abierto { opacity: 1; visibility: visible; }
+
+.a3-modal {
+  position: fixed; top: 50%; left: 50%; transform: translate(-50%, -45%) scale(0.95);
+  width: 950px; max-width: 95vw; height: 85vh; max-height: 850px;
+  background: #fff; border-radius: 16px; box-shadow: 0 25px 70px rgba(0,0,0,0.4);
+  opacity: 0; visibility: hidden; transition: all 0.35s cubic-bezier(.4,0,.2,1);
+  z-index: 1001; display: flex; flex-direction: column; overflow: hidden;
+}
+.a3-modal.abierto { opacity: 1; visibility: visible; transform: translate(-50%, -50%) scale(1); }
+
+.a3-modal-close {
+  position: absolute; top: 16px; right: 20px; background: rgba(255,255,255,0.9);
+  border: 1px solid var(--a3-borde); width: 40px; height: 40px; border-radius: 50%;
+  font-size: 1.6rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s; color: var(--a3-texto); line-height: 1;
+}
+.a3-modal-close:hover { background: var(--a3-negro); color: #fff; transform: rotate(90deg); }
+
+.a3-modal-content { display: grid; grid-template-columns: 1fr 1fr; height: 100%; overflow: hidden; }
+
+.a3-modal-img-container { background: var(--a3-gris-fondo); height: 100%; overflow: hidden; }
+.a3-modal-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.a3-modal-info { padding: 50px 40px; display: flex; flex-direction: column; overflow-y: auto; }
+.a3-modal-marca { font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; color: var(--a3-texto-suave); margin-bottom: 12px; }
+.a3-modal-title { font-size: 2rem; font-weight: 700; margin: 0 0 12px; line-height: 1.15; letter-spacing: -0.5px; }
+.a3-modal-precio { font-size: 1.8rem; font-weight: 700; color: var(--a3-negro); margin: 0 0 24px; }
+.a3-modal-desc { font-size: 0.95rem; color: var(--a3-texto-suave); line-height: 1.7; margin-bottom: 30px; }
+
+.a3-modal-tallas-container { margin-bottom: 30px; }
+.a3-modal-tallas-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 14px; text-transform: uppercase; color: var(--a3-texto); }
+.a3-modal-tallas { display: flex; flex-wrap: wrap; gap: 10px; }
+.a3-modal-talla-btn { min-width: 52px; height: 48px; padding: 0 14px; border: 1px solid var(--a3-borde); background: #fff; border-radius: 8px; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: all 0.2s; font-family: inherit; }
+.a3-modal-talla-btn:hover { border-color: var(--a3-negro); }
+.a3-modal-talla-btn.activo { background: var(--a3-negro); color: #fff; border-color: var(--a3-negro); }
+
+/* Botón Modal SIEMPRE VISIBLE */
+.a3-modal-btn-agregar {
+  width: 100%; padding: 18px; background: var(--a3-negro); color: #fff; border: none; border-radius: 8px;
+  cursor: pointer; font-weight: 700; font-size: 1rem; letter-spacing: 0.5px;
+  margin-top: auto;
+  transition: background 0.3s, transform 0.15s;
+  flex-shrink: 0;
+}
+.a3-modal-btn-agregar:hover { background: #333; transform: translateY(-2px); }
+
+/* RESPONSIVE MODAL */
+@media (max-width: 768px) {
+  .a3-modal { height: 90vh; width: 95vw; }
+  .a3-modal-content { grid-template-columns: 1fr; overflow-y: auto; }
+  .a3-modal-img-container { height: 300px; min-height: 300px; }
+  .a3-modal-info { padding: 30px 24px; overflow-y: visible; }
+  .a3-modal-title { font-size: 1.5rem; }
+  .a3-modal-precio { font-size: 1.3rem; }
+}
+
+/* ===== DRAWER ===== */
+.a3-drawer-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); opacity: 0; visibility: hidden; transition: opacity var(--a3-transition), visibility var(--a3-transition); z-index: 998; }
+.a3-drawer-overlay.abierto { opacity: 1; visibility: visible; }
+.a3-drawer { position: fixed; top: 0; right: 0; width: 400px; max-width: 90vw; height: 100%; background: #fff; display: flex; flex-direction: column; transform: translateX(100%); transition: transform var(--a3-transition); z-index: 999; box-shadow: -10px 0 40px rgba(0,0,0,0.15); }
+.a3-drawer.abierto { transform: translateX(0); }
+.a3-drawer-header { display: flex; justify-content: space-between; align-items: center; padding: 24px; border-bottom: 1px solid var(--a3-borde); }
+.a3-drawer-header h3 { margin: 0; font-size: 1.2rem; font-weight: 700; }
+.a3-drawer-close { background: none; border: none; font-size: 1.8rem; cursor: pointer; line-height: 1; color: var(--a3-texto-suave); }
+.a3-drawer-body { flex: 1; overflow-y: auto; padding: 20px 24px; }
+.a3-carrito-vacio { text-align: center; color: var(--a3-texto-suave); margin-top: 40px; }
+.a3-drawer-footer { padding: 24px; border-top: 1px solid var(--a3-borde); background: var(--a3-gris-fondo); }
+.a3-drawer-total { display: flex; justify-content: space-between; margin-bottom: 16px; font-size: 1.1rem; font-weight: 700; }
+.a3-btn-vaciar { width: 100%; padding: 12px; background: transparent; border: 1px solid var(--a3-borde); border-radius: 8px; cursor: pointer; margin-bottom: 10px; font-size: 0.85rem; color: var(--a3-texto-suave); transition: all 0.2s; }
+.a3-btn-vaciar:hover { border-color: #ef4444; color: #ef4444; }
+.a3-btn-comprar { width: 100%; padding: 14px; background: var(--a3-negro); color: #fff; border: none; border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 1rem; }
+.a3-item { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--a3-borde); }
+.a3-item img { width: 70px; height: 90px; object-fit: cover; border-radius: 8px; } 
+.a3-item-info { flex: 1; font-size: 0.9rem; }
+.a3-item-info h4 { margin: 0 0 4px; font-size: 0.95rem; }
+.a3-item-info .a3-item-talla { color: var(--a3-texto-suave); font-size: 0.8rem; }
+.a3-item-controles { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+.a3-item-controles button { width: 28px; height: 28px; border: 1px solid var(--a3-borde); background: #fff; border-radius: 6px; cursor: pointer; font-weight: bold; }
+.a3-item-eliminar { background: none; border: none; color: #ef4444; cursor: pointer; font-size: 0.8rem; align-self: flex-start; }
+
+/* TOAST */
+.a3-toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--a3-negro); color: #fff; padding: 14px 28px; border-radius: 30px; font-size: 0.9rem; font-weight: 500; opacity: 0; visibility: hidden; transition: all 0.4s ease; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+.a3-toast.visible { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+/* RESPONSIVE GENERAL */
+@media (max-width: 768px) {
+  .a3-seccion .titulo-seccion { font-size: 2rem; }
+  .a3-grid-productos { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .a3-toolbar { flex-direction: column; align-items: stretch; }
+  .a3-search input { width: 100%; min-width: unset; }
+  .a3-controles { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .a3-grid-productos { grid-template-columns: 1fr; }
+}

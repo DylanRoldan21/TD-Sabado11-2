@@ -1,141 +1,269 @@
+<!-- Cargar estilos de la sección -->
+<link rel="stylesheet" href="../css/03-hombre.css">
+
 <!-- ======================= ALUMNO 3: HOMBRE ======================= -->
 <section class="seccion a3-seccion" id="hombre">
   <div class="contenedor">
-    <p class="eyebrow">Colección</p>
+    <p class="eyebrow">COLECCIÓN</p>
     <h2 class="titulo-seccion">Hombre</h2>
-    <p class="subtitulo-seccion">Polos, camisas, pantalones y casacas para tu día a día.</p>
+    <p class="subtitulo-seccion">Eleva tu estilo con nuestra selección premium de polos, camisas, pantalones y casacas.</p>
 
-    <div class="filtros">
-      <button class="filtro activo" data-filtro="todo">Todo</button>
-      <button class="filtro" data-filtro="polos">Polos</button>
-      <button class="filtro" data-filtro="camisas">Camisas</button>
-      <button class="filtro" data-filtro="pantalones">Pantalones</button>
-      <button class="filtro" data-filtro="casacas">Casacas</button>
+    <!-- Barra de herramientas -->
+    <div class="a3-toolbar">
+      <div class="a3-search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="a3-search-input" placeholder="Buscar prenda..." aria-label="Buscar producto">
+      </div>
+
+      <div class="a3-filtros" role="group" aria-label="Filtrar por categoría">
+        <button class="a3-filtro activo" data-filtro="todo">Todo</button>
+        <button class="a3-filtro" data-filtro="polos">Polos</button>
+        <button class="a3-filtro" data-filtro="camisas">Camisas</button>
+        <button class="a3-filtro" data-filtro="pantalones">Pantalones</button>
+        <button class="a3-filtro" data-filtro="casacas">Casacas</button>
+      </div>
+
+      <div class="a3-controles">
+        <select id="a3-precio-filtro" aria-label="Filtrar por precio">
+          <option value="todo">Precios</option>
+          <option value="0-50">Hasta S/ 50</option>
+          <option value="50-100">S/ 50 - S/ 100</option>
+          <option value="100-200">S/ 100 - S/ 200</option>
+          <option value="200+">Más de S/ 200</option>
+        </select>
+
+        <select id="a3-orden" aria-label="Ordenar productos">
+          <option value="default">Recomendados</option>
+          <option value="precio-asc">Menor precio</option>
+          <option value="precio-desc">Mayor precio</option>
+        </select>
+      </div>
     </div>
+    
+    <p class="a3-contador" id="a3-contador">Mostrando 16 productos</p>
 
-    <!--
-      CÓMO EDITAR UN PRODUCTO (cada <article> es un producto):
-        data-nombre   = nombre que se guarda en el carrito
-        data-precio   = precio SOLO con números y punto (ej: 49.90)
-        data-categoria= debe ser IGUAL al data-filtro de un botón de arriba
-      El nombre y el precio también se escriben en el texto visible (h3 y p).
-      Para agregar un producto: copia un <article> completo y pégalo debajo.
-    -->
-    <div class="grid-productos">
-      <article class="producto" data-categoria="polos" data-nombre="Polo Básico Negro" data-precio="49.90">
-        <div class="producto-foto">
-          <img src="img/alumno3/hombre1.svg" alt="Polo Básico Negro">
-          <span class="producto-etiqueta">NUEVO</span>
+    <!-- Grid de productos (16 en total) -->
+    <div class="grid-productos a3-grid-productos" id="a3-grid">
+      
+      <!-- POLOS (4) -->
+      <article class="producto a3-producto" data-categoria="polos" data-nombre="Polo Essential Negro" data-precio="49.90" data-id="p1">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTll3L2c9JF4QXaFCnEpcfEw_lNZS2wXAcNBgodeKtqSsmtHUi5qw1FwEg&s=10" alt="Polo Essential Negro" loading="lazy">
+          <span class="producto-etiqueta a3-etiqueta">NUEVO</span>
         </div>
-        <div class="producto-info">
-          <h3 class="producto-nombre">Polo Básico Negro</h3>
-          <p class="producto-precio">S/ 49.90</p>
-          <div class="a3-tallas">
-            <button>S</button><button>M</button><button>L</button><button>XL</button>
-          </div>
-          <button class="btn-agregar">Agregar al carrito</button>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Polo Essential Negro</h3>
+          <p class="producto-precio a3-precio">S/ 49.90</p>
         </div>
       </article>
 
-      <article class="producto" data-categoria="polos" data-nombre="Polo Oversize Blanco" data-precio="59.90">
-        <div class="producto-foto">
-          <img src="img/alumno3/hombre2.svg" alt="Polo Oversize Blanco">
+      <article class="producto a3-producto" data-categoria="polos" data-nombre="Polo Oversize Blanco" data-precio="59.90" data-id="p2">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://www.migamarra.pe/cdn/shop/files/skeep_fotos_tamano_app_2.030_9dc54e1f-094c-46fe-8726-1c0d91490bc4.jpg?v=1752437492&width=1445" alt="Polo Oversize Blanco" loading="lazy">
         </div>
-        <div class="producto-info">
-          <h3 class="producto-nombre">Polo Oversize Blanco</h3>
-          <p class="producto-precio">S/ 59.90</p>
-          <div class="a3-tallas">
-            <button>S</button><button>M</button><button>L</button><button>XL</button>
-          </div>
-          <button class="btn-agregar">Agregar al carrito</button>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Polo Oversize Blanco</h3>
+          <p class="producto-precio a3-precio">S/ 59.90</p>
         </div>
       </article>
 
-      <article class="producto" data-categoria="camisas" data-nombre="Camisa Oxford Celeste" data-precio="89.90">
-        <div class="producto-foto">
-          <img src="img/alumno3/hombre3.svg" alt="Camisa Oxford Celeste">
+      <article class="producto a3-producto" data-categoria="polos" data-nombre="Polo Piqué Azul" data-precio="69.90" data-id="p3">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://force.pe/wp-content/uploads/2023/06/polo-azul-pique.webp" alt="Polo Piqué Azul" loading="lazy">
         </div>
-        <div class="producto-info">
-          <h3 class="producto-nombre">Camisa Oxford Celeste</h3>
-          <p class="producto-precio">S/ 89.90</p>
-          <div class="a3-tallas">
-            <button>S</button><button>M</button><button>L</button><button>XL</button>
-          </div>
-          <button class="btn-agregar">Agregar al carrito</button>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Polo Piqué Azul</h3>
+          <p class="producto-precio a3-precio">S/ 69.90</p>
         </div>
       </article>
 
-      <article class="producto" data-categoria="camisas" data-nombre="Camisa de Lino Beige" data-precio="99.90">
-        <div class="producto-foto">
-          <img src="img/alumno3/hombre4.svg" alt="Camisa de Lino Beige">
-          <span class="producto-etiqueta">NUEVO</span>
+      <article class="producto a3-producto" data-categoria="polos" data-nombre="Polo Estampado Gris" data-precio="55.90" data-id="p4">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://mercury.vtexassets.com/arquivos/ids/20789736-800-800?v=638827060219600000&width=800&height=800&aspect=true" alt="Polo Estampado Gris" loading="lazy">
         </div>
-        <div class="producto-info">
-          <h3 class="producto-nombre">Camisa de Lino Beige</h3>
-          <p class="producto-precio">S/ 99.90</p>
-          <div class="a3-tallas">
-            <button>S</button><button>M</button><button>L</button><button>XL</button>
-          </div>
-          <button class="btn-agregar">Agregar al carrito</button>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Polo Estampado Gris</h3>
+          <p class="producto-precio a3-precio">S/ 55.90</p>
         </div>
       </article>
 
-      <article class="producto" data-categoria="pantalones" data-nombre="Jean Slim Azul" data-precio="119.90">
-        <div class="producto-foto">
-          <img src="img/alumno3/hombre5.svg" alt="Jean Slim Azul">
+      <!-- CAMISAS (4) -->
+      <article class="producto a3-producto" data-categoria="camisas" data-nombre="Camisa Oxford Celeste" data-precio="89.90" data-id="c1">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://b2btreckpe.vtexassets.com/arquivos/ids/171864/06-10-175-F1.jpg?v=639223226132970000" alt="Camisa Oxford Celeste" loading="lazy">
         </div>
-        <div class="producto-info">
-          <h3 class="producto-nombre">Jean Slim Azul</h3>
-          <p class="producto-precio">S/ 119.90</p>
-          <div class="a3-tallas">
-            <button>S</button><button>M</button><button>L</button><button>XL</button>
-          </div>
-          <button class="btn-agregar">Agregar al carrito</button>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Camisa Oxford Celeste</h3>
+          <p class="producto-precio a3-precio">S/ 89.90</p>
         </div>
       </article>
 
-      <article class="producto" data-categoria="pantalones" data-nombre="Jogger Cargo Verde" data-precio="99.90">
-        <div class="producto-foto">
-          <img src="img/alumno3/hombre6.svg" alt="Jogger Cargo Verde">
+      <article class="producto a3-producto" data-categoria="camisas" data-nombre="Camisa Lino Beige" data-precio="99.90" data-id="c2">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://rkflife.pe/cdn/shop/files/RK110021753_B74_1.jpg?v=1787001610" alt="Camisa Lino Beige" loading="lazy">
+          <span class="producto-etiqueta a3-etiqueta">NUEVO</span>
         </div>
-        <div class="producto-info">
-          <h3 class="producto-nombre">Jogger Cargo Verde</h3>
-          <p class="producto-precio">S/ 99.90</p>
-          <div class="a3-tallas">
-            <button>S</button><button>M</button><button>L</button><button>XL</button>
-          </div>
-          <button class="btn-agregar">Agregar al carrito</button>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Camisa Lino Beige</h3>
+          <p class="producto-precio a3-precio">S/ 99.90</p>
         </div>
       </article>
 
-      <article class="producto" data-categoria="casacas" data-nombre="Casaca Denim" data-precio="159.90">
-        <div class="producto-foto">
-          <img src="img/alumno3/hombre7.svg" alt="Casaca Denim">
+      <article class="producto a3-producto" data-categoria="camisas" data-nombre="Camisa Manga Corta" data-precio="79.90" data-id="c3">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://cdn-images.farfetch-contents.com/30/38/70/93/30387093_59540196_600.jpg" alt="Camisa Manga Corta" loading="lazy">
         </div>
-        <div class="producto-info">
-          <h3 class="producto-nombre">Casaca Denim</h3>
-          <p class="producto-precio">S/ 159.90</p>
-          <div class="a3-tallas">
-            <button>S</button><button>M</button><button>L</button><button>XL</button>
-          </div>
-          <button class="btn-agregar">Agregar al carrito</button>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Camisa Manga Corta</h3>
+          <p class="producto-precio a3-precio">S/ 79.90</p>
         </div>
       </article>
 
-      <article class="producto" data-categoria="casacas" data-nombre="Casaca Bomber Negra" data-precio="179.90">
-        <div class="producto-foto">
-          <img src="img/alumno3/hombre8.svg" alt="Casaca Bomber Negra">
-          <span class="producto-etiqueta">TOP</span>
+      <article class="producto a3-producto" data-categoria="camisas" data-nombre="Camisa Denim Slim" data-precio="109.90" data-id="c4">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://www.aeo.com.pe/cdn/shop/files/0153_3004_272_f.jpg?v=1786025756&width=600" alt="Camisa Denim Slim" loading="lazy">
         </div>
-        <div class="producto-info">
-          <h3 class="producto-nombre">Casaca Bomber Negra</h3>
-          <p class="producto-precio">S/ 179.90</p>
-          <div class="a3-tallas">
-            <button>S</button><button>M</button><button>L</button><button>XL</button>
-          </div>
-          <button class="btn-agregar">Agregar al carrito</button>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Camisa Denim Slim</h3>
+          <p class="producto-precio a3-precio">S/ 109.90</p>
         </div>
       </article>
+
+      <!-- PANTALONES (4) -->
+      <article class="producto a3-producto" data-categoria="pantalones" data-nombre="Jean Slim Azul" data-precio="119.90" data-id="pa1">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://www.aeo.com.pe/cdn/shop/files/0117_6999_447_b.jpg?v=1785870963&width=600" alt="Jean Slim Azul" loading="lazy">
+        </div>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Jean Slim Azul</h3>
+          <p class="producto-precio a3-precio">S/ 119.90</p>
+        </div>
+      </article>
+
+      <article class="producto a3-producto" data-categoria="pantalones" data-nombre="Jogger Cargo Verde" data-precio="99.90" data-id="pa2">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe1J2UKWbheELKL110Ib5dG5xJMgQtoFSW8KK7zzWpHg&s" alt="Jogger Cargo Verde" loading="lazy">
+        </div>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Jogger Cargo Verde</h3>
+          <p class="producto-precio a3-precio">S/ 99.90</p>
+        </div>
+      </article>
+
+      <article class="producto a3-producto" data-categoria="pantalones" data-nombre="Pantalón Chino Khaki" data-precio="109.90" data-id="pa3">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhHZAgUm63MYJXgq0SyWz61g6c-_7I-Ub8lHvHUVSD6Q&s" alt="Pantalón Chino Khaki" loading="lazy">
+        </div>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Pantalón Chino Khaki</h3>
+          <p class="producto-precio a3-precio">S/ 109.90</p>
+        </div>
+      </article>
+
+      <article class="producto a3-producto" data-categoria="pantalones" data-nombre="Pantalón Formal Negro" data-precio="129.90" data-id="pa4">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://arocauniformes.com/wp-content/uploads/2020/09/95.1.jpg" alt="Pantalón Formal Negro" loading="lazy">
+        </div>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Pantalón Formal Negro</h3>
+          <p class="producto-precio a3-precio">S/ 129.90</p>
+        </div>
+      </article>
+
+      <!-- CASACAS (4) -->
+      <article class="producto a3-producto" data-categoria="casacas" data-nombre="Casaca Denim Clásica" data-precio="159.90" data-id="ca1">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/4054/PMP20000067271/full_image-17" alt="Casaca Denim Clásica" loading="lazy">
+        </div>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Casaca Denim Clásica</h3>
+          <p class="producto-precio a3-precio">S/ 159.90</p>
+        </div>
+      </article>
+
+      <article class="producto a3-producto" data-categoria="casacas" data-nombre="Casaca Bomber Negra" data-precio="179.90" data-id="ca2">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrKCsxqiwlXvpcqT1XWurH8SIBf4Y4lJNpCBNaSIMsXCN2IuG77v2lwEs&s=10" alt="Casaca Bomber Negra" loading="lazy">
+          <span class="producto-etiqueta a3-etiqueta">TOP</span>
+        </div>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Casaca Bomber Negra</h3>
+          <p class="producto-precio a3-precio">S/ 179.90</p>
+        </div>
+      </article>
+
+      <article class="producto a3-producto" data-categoria="casacas" data-nombre="Casaca Corta Viento" data-precio="139.90" data-id="ca3">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://brujhas.com/cdn/shop/files/CAMEL_1__75107.1782938958.1280.1280.jpg?v=1782957577&width=1920" alt="Casaca Corta Viento" loading="lazy">
+        </div>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Casaca Corta Viento</h3>
+          <p class="producto-precio a3-precio">S/ 139.90</p>
+        </div>
+      </article>
+
+      <article class="producto a3-producto" data-categoria="casacas" data-nombre="Casaca Acolchada" data-precio="199.90" data-id="ca4">
+        <div class="producto-foto a3-producto-foto">
+          <img src="https://savisafety.com/wp-content/uploads/2025/06/BLOOM-03.jpg" alt="Casaca Acolchada" loading="lazy">
+        </div>
+        <div class="producto-info a3-producto-info">
+          <h3 class="producto-nombre a3-nombre">Casaca Acolchada</h3>
+          <p class="producto-precio a3-precio">S/ 199.90</p>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
+
+<!-- ======================= MODAL DE PRODUCTO ======================= -->
+<div class="a3-modal-overlay" id="a3-modal-overlay"></div>
+<div class="a3-modal" id="a3-modal" role="dialog" aria-modal="true">
+  <button class="a3-modal-close" id="a3-modal-close" aria-label="Cerrar">&times;</button>
+  
+  <div class="a3-modal-content">
+    <div class="a3-modal-img-container">
+      <img src="" alt="" id="a3-modal-img" class="a3-modal-img">
+    </div>
+    
+    <div class="a3-modal-info">
+      <span class="a3-modal-marca">COLECCIÓN HOMBRE</span>
+      <h2 class="a3-modal-title" id="a3-modal-title">Nombre</h2>
+      <p class="a3-modal-precio" id="a3-modal-precio">S/ 0.00</p>
+      
+      <p class="a3-modal-desc">Prenda de alta calidad confeccionada con materiales premium para brindarte comodidad y estilo en tu día a día.</p>
+      
+      <div class="a3-modal-tallas-container">
+        <p class="a3-modal-tallas-label">SELECCIONA TU TALLA</p>
+        <div class="a3-modal-tallas" id="a3-modal-tallas"></div>
+      </div>
+      
+      <button class="a3-modal-btn-agregar" id="a3-modal-btn-agregar">Agregar al carrito</button>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= CARRITO LATERAL ======================= -->
+<div class="a3-drawer-overlay" id="a3-drawer-overlay"></div>
+<aside class="a3-drawer" id="a3-drawer">
+  <div class="a3-drawer-header">
+    <h3>Tu Carrito</h3>
+    <button class="a3-drawer-close" id="a3-drawer-close">&times;</button>
+  </div>
+  <div class="a3-drawer-body" id="a3-drawer-body">
+    <p class="a3-carrito-vacio">Tu carrito está vacío.</p>
+  </div>
+  <div class="a3-drawer-footer">
+    <div class="a3-drawer-total">
+      <span>Total:</span>
+      <strong id="a3-total">S/ 0.00</strong>
+    </div>
+    <button class="a3-btn-vaciar" id="a3-btn-vaciar">Vaciar carrito</button>
+    <button class="a3-btn-comprar">Finalizar Compra</button>
+  </div>
+</aside>
+
+<div class="a3-toast" id="a3-toast"></div>
+
+<!-- Script para que funcione el modal y el carrito -->
+<script src="../js/03-hombre.js"></script>
