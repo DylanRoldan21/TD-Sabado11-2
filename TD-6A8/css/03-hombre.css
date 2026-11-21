@@ -1,0 +1,8 @@
+/* ALUMNO 3 - Hombre. Usa SOLO clases que empiecen con .a3- */
+.a3-seccion { background: var(--blanco); }
+
+/* Botones de talla */
+.a3-tallas { display: flex; gap: 6px; }
+.a3-tallas button { width: 36px; height: 34px; border: 1px solid var(--borde); background: #fff; border-radius: 6px; cursor: pointer; font-size: .8rem; transition: .2s; }
+.a3-tallas button:hover { border-color: var(--negro); }
+.a3-tallas button.activo { background: var(--negro); color: #fff; border-color: var(--negro); }

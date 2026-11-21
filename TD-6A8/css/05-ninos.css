@@ -1,0 +1,10 @@
+/* ALUMNO 5 - Niños. Usa SOLO clases que empiecen con .a5- */
+.a5-seccion { background: linear-gradient(180deg, #ffffff, #eef5ff); }
+.a5-seccion .titulo-seccion { color: #3b6fd8; }
+.a5-seccion .filtro.activo { background: #3b6fd8; border-color: #3b6fd8; }
+
+/* Bolitas de color */
+.a5-colores { display: flex; gap: 8px; align-items: center; }
+.a5-color { width: 24px; height: 24px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px var(--borde); cursor: pointer; transition: .2s; }
+.a5-color.activo { box-shadow: 0 0 0 2px var(--negro); transform: scale(1.1); }
+.a5-color-texto { font-size: .8rem; color: var(--gris); }

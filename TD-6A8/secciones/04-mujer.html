@@ -1,0 +1,126 @@
+<!-- ======================= ALUMNO 4: MUJER ======================= -->
+<section class="seccion a4-seccion" id="mujer">
+  <div class="contenedor">
+    <p class="eyebrow">Colección</p>
+    <h2 class="titulo-seccion">Mujer</h2>
+    <p class="subtitulo-seccion">Vestidos, blusas, jeans y faldas para cada ocasión.</p>
+    <p class="a4-favoritos">❤️ Favoritos: <strong id="a4-favoritos">0</strong></p>
+
+    <div class="filtros">
+      <button class="filtro activo" data-filtro="todo">Todo</button>
+      <button class="filtro" data-filtro="vestidos">Vestidos</button>
+      <button class="filtro" data-filtro="blusas">Blusas</button>
+      <button class="filtro" data-filtro="jeans">Jeans</button>
+      <button class="filtro" data-filtro="faldas">Faldas</button>
+    </div>
+
+    <!--
+      CÓMO EDITAR UN PRODUCTO (cada <article> es un producto):
+        data-nombre   = nombre que se guarda en el carrito
+        data-precio   = precio SOLO con números y punto (ej: 49.90)
+        data-categoria= debe ser IGUAL al data-filtro de un botón de arriba
+      El nombre y el precio también se escriben en el texto visible (h3 y p).
+      Para agregar un producto: copia un <article> completo y pégalo debajo.
+    -->
+    <div class="grid-productos">
+      <article class="producto" data-categoria="vestidos" data-nombre="Vestido Floral" data-precio="129.90">
+        <div class="producto-foto">
+          <img src="img/alumno4/mujer1.svg" alt="Vestido Floral">
+          <span class="producto-etiqueta">NUEVO</span>
+          <button class="a4-fav" aria-label="Agregar a favoritos">♡</button>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Vestido Floral</h3>
+          <p class="producto-precio">S/ 129.90</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="vestidos" data-nombre="Vestido Negro Midi" data-precio="149.90">
+        <div class="producto-foto">
+          <img src="img/alumno4/mujer2.svg" alt="Vestido Negro Midi">
+          <button class="a4-fav" aria-label="Agregar a favoritos">♡</button>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Vestido Negro Midi</h3>
+          <p class="producto-precio">S/ 149.90</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="blusas" data-nombre="Blusa Satín Rosa" data-precio="79.90">
+        <div class="producto-foto">
+          <img src="img/alumno4/mujer3.svg" alt="Blusa Satín Rosa">
+          <button class="a4-fav" aria-label="Agregar a favoritos">♡</button>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Blusa Satín Rosa</h3>
+          <p class="producto-precio">S/ 79.90</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="blusas" data-nombre="Blusa Blanca Clásica" data-precio="69.90">
+        <div class="producto-foto">
+          <img src="img/alumno4/mujer4.svg" alt="Blusa Blanca Clásica">
+          <button class="a4-fav" aria-label="Agregar a favoritos">♡</button>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Blusa Blanca Clásica</h3>
+          <p class="producto-precio">S/ 69.90</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="jeans" data-nombre="Jean Mom Celeste" data-precio="119.90">
+        <div class="producto-foto">
+          <img src="img/alumno4/mujer5.svg" alt="Jean Mom Celeste">
+          <span class="producto-etiqueta">TOP</span>
+          <button class="a4-fav" aria-label="Agregar a favoritos">♡</button>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Jean Mom Celeste</h3>
+          <p class="producto-precio">S/ 119.90</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="jeans" data-nombre="Jean Wide Leg" data-precio="129.90">
+        <div class="producto-foto">
+          <img src="img/alumno4/mujer6.svg" alt="Jean Wide Leg">
+          <button class="a4-fav" aria-label="Agregar a favoritos">♡</button>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Jean Wide Leg</h3>
+          <p class="producto-precio">S/ 129.90</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="faldas" data-nombre="Falda Plisada" data-precio="89.90">
+        <div class="producto-foto">
+          <img src="img/alumno4/mujer7.svg" alt="Falda Plisada">
+          <button class="a4-fav" aria-label="Agregar a favoritos">♡</button>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Falda Plisada</h3>
+          <p class="producto-precio">S/ 89.90</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="faldas" data-nombre="Falda Denim" data-precio="79.90">
+        <div class="producto-foto">
+          <img src="img/alumno4/mujer8.svg" alt="Falda Denim">
+          <span class="producto-etiqueta">NUEVO</span>
+          <button class="a4-fav" aria-label="Agregar a favoritos">♡</button>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Falda Denim</h3>
+          <p class="producto-precio">S/ 79.90</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

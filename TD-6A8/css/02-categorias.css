@@ -1,0 +1,23 @@
+/* ALUMNO 2 - Categorías + Beneficios. Usa SOLO clases que empiecen con .a2- */
+.a2-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.a2-cat { position: relative; border-radius: var(--radio); overflow: hidden; aspect-ratio: 3 / 4; opacity: 0; transform: translateY(30px); transition: opacity .6s, transform .6s; }
+.a2-cat.visible { opacity: 1; transform: none; }
+.a2-cat img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.a2-cat:hover img { transform: scale(1.08); }
+.a2-cat-texto { position: absolute; left: 0; right: 0; bottom: 0; padding: 24px; color: #fff; background: linear-gradient(transparent, rgba(0, 0, 0, .7)); }
+.a2-cat-texto h3 { font-family: var(--fuente-titulo); font-size: 1.8rem; }
+.a2-cat-texto span { font-size: .85rem; letter-spacing: 1px; }
+
+.a2-beneficios { background: var(--crema); padding: 36px 0; }
+.a2-beneficios-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.a2-beneficio { display: flex; align-items: center; gap: 14px; }
+.a2-beneficio > span { font-size: 2rem; }
+.a2-beneficio h4 { font-size: .95rem; }
+.a2-beneficio p { font-size: .8rem; color: var(--gris); }
+
+@media (max-width: 900px) {
+  .a2-grid, .a2-beneficios-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .a2-beneficios-grid { grid-template-columns: 1fr; }
+}

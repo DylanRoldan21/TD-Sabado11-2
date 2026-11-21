@@ -1,0 +1,141 @@
+<!-- ======================= ALUMNO 3: HOMBRE ======================= -->
+<section class="seccion a3-seccion" id="hombre">
+  <div class="contenedor">
+    <p class="eyebrow">Colección</p>
+    <h2 class="titulo-seccion">Hombre</h2>
+    <p class="subtitulo-seccion">Polos, camisas, pantalones y casacas para tu día a día.</p>
+
+    <div class="filtros">
+      <button class="filtro activo" data-filtro="todo">Todo</button>
+      <button class="filtro" data-filtro="polos">Polos</button>
+      <button class="filtro" data-filtro="camisas">Camisas</button>
+      <button class="filtro" data-filtro="pantalones">Pantalones</button>
+      <button class="filtro" data-filtro="casacas">Casacas</button>
+    </div>
+
+    <!--
+      CÓMO EDITAR UN PRODUCTO (cada <article> es un producto):
+        data-nombre   = nombre que se guarda en el carrito
+        data-precio   = precio SOLO con números y punto (ej: 49.90)
+        data-categoria= debe ser IGUAL al data-filtro de un botón de arriba
+      El nombre y el precio también se escriben en el texto visible (h3 y p).
+      Para agregar un producto: copia un <article> completo y pégalo debajo.
+    -->
+    <div class="grid-productos">
+      <article class="producto" data-categoria="polos" data-nombre="Polo Básico Negro" data-precio="49.90">
+        <div class="producto-foto">
+          <img src="img/alumno3/hombre1.svg" alt="Polo Básico Negro">
+          <span class="producto-etiqueta">NUEVO</span>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Polo Básico Negro</h3>
+          <p class="producto-precio">S/ 49.90</p>
+          <div class="a3-tallas">
+            <button>S</button><button>M</button><button>L</button><button>XL</button>
+          </div>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="polos" data-nombre="Polo Oversize Blanco" data-precio="59.90">
+        <div class="producto-foto">
+          <img src="img/alumno3/hombre2.svg" alt="Polo Oversize Blanco">
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Polo Oversize Blanco</h3>
+          <p class="producto-precio">S/ 59.90</p>
+          <div class="a3-tallas">
+            <button>S</button><button>M</button><button>L</button><button>XL</button>
+          </div>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="camisas" data-nombre="Camisa Oxford Celeste" data-precio="89.90">
+        <div class="producto-foto">
+          <img src="img/alumno3/hombre3.svg" alt="Camisa Oxford Celeste">
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Camisa Oxford Celeste</h3>
+          <p class="producto-precio">S/ 89.90</p>
+          <div class="a3-tallas">
+            <button>S</button><button>M</button><button>L</button><button>XL</button>
+          </div>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="camisas" data-nombre="Camisa de Lino Beige" data-precio="99.90">
+        <div class="producto-foto">
+          <img src="img/alumno3/hombre4.svg" alt="Camisa de Lino Beige">
+          <span class="producto-etiqueta">NUEVO</span>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Camisa de Lino Beige</h3>
+          <p class="producto-precio">S/ 99.90</p>
+          <div class="a3-tallas">
+            <button>S</button><button>M</button><button>L</button><button>XL</button>
+          </div>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="pantalones" data-nombre="Jean Slim Azul" data-precio="119.90">
+        <div class="producto-foto">
+          <img src="img/alumno3/hombre5.svg" alt="Jean Slim Azul">
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Jean Slim Azul</h3>
+          <p class="producto-precio">S/ 119.90</p>
+          <div class="a3-tallas">
+            <button>S</button><button>M</button><button>L</button><button>XL</button>
+          </div>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="pantalones" data-nombre="Jogger Cargo Verde" data-precio="99.90">
+        <div class="producto-foto">
+          <img src="img/alumno3/hombre6.svg" alt="Jogger Cargo Verde">
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Jogger Cargo Verde</h3>
+          <p class="producto-precio">S/ 99.90</p>
+          <div class="a3-tallas">
+            <button>S</button><button>M</button><button>L</button><button>XL</button>
+          </div>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="casacas" data-nombre="Casaca Denim" data-precio="159.90">
+        <div class="producto-foto">
+          <img src="img/alumno3/hombre7.svg" alt="Casaca Denim">
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Casaca Denim</h3>
+          <p class="producto-precio">S/ 159.90</p>
+          <div class="a3-tallas">
+            <button>S</button><button>M</button><button>L</button><button>XL</button>
+          </div>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="casacas" data-nombre="Casaca Bomber Negra" data-precio="179.90">
+        <div class="producto-foto">
+          <img src="img/alumno3/hombre8.svg" alt="Casaca Bomber Negra">
+          <span class="producto-etiqueta">TOP</span>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Casaca Bomber Negra</h3>
+          <p class="producto-precio">S/ 179.90</p>
+          <div class="a3-tallas">
+            <button>S</button><button>M</button><button>L</button><button>XL</button>
+          </div>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,93 @@
+<!-- ======================= ALUMNO 9: CONTACTO + NEWSLETTER + FOOTER ======================= -->
+<section class="seccion a9-seccion" id="contacto">
+  <div class="contenedor">
+    <p class="eyebrow">Estamos para ayudarte</p>
+    <h2 class="titulo-seccion">Contáctanos</h2>
+    <p class="subtitulo-seccion">Escríbenos y te respondemos por WhatsApp en minutos.</p>
+
+    <div class="a9-grid">
+      <!-- Datos de la tienda -->
+      <div class="a9-info">
+        <div class="a9-dato"><span>📍</span><div><h4>Dirección</h4><p>Av. Universitaria 1234, Comas – Lima</p></div></div>
+        <div class="a9-dato"><span>📞</span><div><h4>Teléfono / WhatsApp</h4><p>+51 999 999 999</p></div></div>
+        <div class="a9-dato"><span>🕒</span><div><h4>Horario</h4><p>Lunes a sábado de 9:00 a. m. a 8:00 p. m.</p></div></div>
+        <div class="a9-dato"><span>✉️</span><div><h4>Correo</h4><p>ventas@modaurbana.pe</p></div></div>
+      </div>
+
+      <!-- Formulario: al enviarlo abre WhatsApp con el mensaje escrito -->
+      <form class="a9-form" id="a9-form" novalidate>
+        <label>Nombre completo
+          <input type="text" id="a9-nombre" placeholder="Ej: Ana Torres">
+        </label>
+        <label>Celular
+          <input type="tel" id="a9-celular" placeholder="Ej: 987654321" maxlength="9">
+        </label>
+        <label>Motivo
+          <select id="a9-motivo">
+            <option>Consulta de tallas</option>
+            <option>Estado de mi pedido</option>
+            <option>Cambios y devoluciones</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <label>Mensaje
+          <textarea id="a9-mensaje" rows="4" placeholder="Escribe tu consulta..."></textarea>
+        </label>
+        <p class="a9-error" id="a9-error"></p>
+        <button type="submit" class="btn">Enviar por WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="a9-newsletter">
+  <div class="contenedor a9-newsletter-caja">
+    <div>
+      <h3>Suscríbete y obtén 10% de descuento</h3>
+      <p>Recibe novedades y ofertas exclusivas en tu correo.</p>
+    </div>
+    <form id="a9-suscribir" class="a9-suscribir" novalidate>
+      <input type="email" id="a9-correo" placeholder="tucorreo@ejemplo.com">
+      <button type="submit" class="btn">Suscribirme</button>
+    </form>
+  </div>
+</section>
+
+<!-- Pie de página -->
+<footer class="a9-footer">
+  <div class="contenedor a9-footer-grid">
+    <div>
+      <p class="a9-logo">MODA<span>Urbana</span></p>
+      <p class="a9-descripcion">Ropa moderna para toda la familia. Calidad peruana a precios justos.</p>
+      <div class="a9-redes">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="TikTok">TikTok</a>
+      </div>
+    </div>
+    <div>
+      <h4>Tienda</h4>
+      <a href="#hombre">Hombre</a>
+      <a href="#mujer">Mujer</a>
+      <a href="#ninos">Niños</a>
+      <a href="#accesorios">Accesorios</a>
+      <a href="#ofertas">Ofertas</a>
+    </div>
+    <div>
+      <h4>Ayuda</h4>
+      <a href="#">Envíos</a>
+      <a href="#">Cambios y devoluciones</a>
+      <a href="#">Guía de tallas</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div>
+      <h4>Medios de pago</h4>
+      <div class="a9-pagos"><span>VISA</span><span>Mastercard</span><span>Yape</span><span>Plin</span></div>
+    </div>
+  </div>
+  <p class="a9-copy">© <span id="a9-anio">2026</span> Moda Urbana · Desarrollado por los alumnos del aula TD-6A8</p>
+</footer>
+
+<!-- Botón flotante de WhatsApp: cambia el número en href y en el JS -->
+<a class="a9-whatsapp" href="https://wa.me/51999999999" target="_blank" aria-label="Escríbenos por WhatsApp">💬</a>

@@ -1,0 +1,110 @@
+<!-- ======================= ALUMNO 5: NIÑOS ======================= -->
+<section class="seccion a5-seccion" id="ninos">
+  <div class="contenedor">
+    <p class="eyebrow">Colección</p>
+    <h2 class="titulo-seccion">Niños</h2>
+    <p class="subtitulo-seccion">Ropa cómoda y divertida para los más pequeños de la casa.</p>
+
+    <div class="filtros">
+      <button class="filtro activo" data-filtro="todo">Todo</button>
+      <button class="filtro" data-filtro="bebe">Bebé (0-2 años)</button>
+      <button class="filtro" data-filtro="nino">Niño</button>
+      <button class="filtro" data-filtro="nina">Niña</button>
+    </div>
+
+    <!--
+      CÓMO EDITAR UN PRODUCTO (cada <article> es un producto):
+        data-nombre   = nombre que se guarda en el carrito
+        data-precio   = precio SOLO con números y punto (ej: 49.90)
+        data-categoria= debe ser IGUAL al data-filtro de un botón de arriba
+      El nombre y el precio también se escriben en el texto visible (h3 y p).
+      Para agregar un producto: copia un <article> completo y pégalo debajo.
+    -->
+    <!--
+      COLORES: cada bolita es un <button class="a5-color">
+        data-color = nombre del color que se muestra y va al carrito
+        style="background:#código" = color de la bolita
+    -->
+    <div class="grid-productos">
+      <article class="producto" data-categoria="bebe" data-nombre="Body de Algodón" data-precio="39.90">
+        <div class="producto-foto">
+          <img src="img/alumno5/ninos1.svg" alt="Body de Algodón">
+          <span class="producto-etiqueta">NUEVO</span>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Body de Algodón</h3>
+          <p class="producto-precio">S/ 39.90</p>
+          <div class="a5-colores"><button class="a5-color activo" data-color="Blanco" style="background:#f5f5f5" aria-label="Blanco"></button><button class="a5-color" data-color="Celeste" style="background:#9cc9f0" aria-label="Celeste"></button><button class="a5-color" data-color="Rosado" style="background:#f3b3c8" aria-label="Rosado"></button></div>
+          <p class="a5-color-texto">Color: Blanco</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="bebe" data-nombre="Conjunto Osito" data-precio="59.90">
+        <div class="producto-foto">
+          <img src="img/alumno5/ninos2.svg" alt="Conjunto Osito">
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Conjunto Osito</h3>
+          <p class="producto-precio">S/ 59.90</p>
+          <div class="a5-colores"><button class="a5-color activo" data-color="Beige" style="background:#e0cba8" aria-label="Beige"></button><button class="a5-color" data-color="Gris" style="background:#b5b5b5" aria-label="Gris"></button></div>
+          <p class="a5-color-texto">Color: Beige</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="nino" data-nombre="Polo Dinosaurio" data-precio="34.90">
+        <div class="producto-foto">
+          <img src="img/alumno5/ninos3.svg" alt="Polo Dinosaurio">
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Polo Dinosaurio</h3>
+          <p class="producto-precio">S/ 34.90</p>
+          <div class="a5-colores"><button class="a5-color activo" data-color="Verde" style="background:#5fae7b" aria-label="Verde"></button><button class="a5-color" data-color="Azul" style="background:#3b6fd8" aria-label="Azul"></button><button class="a5-color" data-color="Amarillo" style="background:#f2c14e" aria-label="Amarillo"></button></div>
+          <p class="a5-color-texto">Color: Verde</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="nino" data-nombre="Short Deportivo" data-precio="39.90">
+        <div class="producto-foto">
+          <img src="img/alumno5/ninos4.svg" alt="Short Deportivo">
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Short Deportivo</h3>
+          <p class="producto-precio">S/ 39.90</p>
+          <div class="a5-colores"><button class="a5-color activo" data-color="Azul" style="background:#3b6fd8" aria-label="Azul"></button><button class="a5-color" data-color="Negro" style="background:#222222" aria-label="Negro"></button></div>
+          <p class="a5-color-texto">Color: Azul</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="nina" data-nombre="Vestido Mariposa" data-precio="69.90">
+        <div class="producto-foto">
+          <img src="img/alumno5/ninos5.svg" alt="Vestido Mariposa">
+          <span class="producto-etiqueta">TOP</span>
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Vestido Mariposa</h3>
+          <p class="producto-precio">S/ 69.90</p>
+          <div class="a5-colores"><button class="a5-color activo" data-color="Lila" style="background:#b79ce0" aria-label="Lila"></button><button class="a5-color" data-color="Rosado" style="background:#f3b3c8" aria-label="Rosado"></button></div>
+          <p class="a5-color-texto">Color: Lila</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+
+      <article class="producto" data-categoria="nina" data-nombre="Casaca Acolchada" data-precio="89.90">
+        <div class="producto-foto">
+          <img src="img/alumno5/ninos6.svg" alt="Casaca Acolchada">
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Casaca Acolchada</h3>
+          <p class="producto-precio">S/ 89.90</p>
+          <div class="a5-colores"><button class="a5-color activo" data-color="Rosado" style="background:#f3b3c8" aria-label="Rosado"></button><button class="a5-color" data-color="Rojo" style="background:#d64545" aria-label="Rojo"></button><button class="a5-color" data-color="Blanco" style="background:#f5f5f5" aria-label="Blanco"></button></div>
+          <p class="a5-color-texto">Color: Rosado</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

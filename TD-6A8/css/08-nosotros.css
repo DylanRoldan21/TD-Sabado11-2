@@ -1,0 +1,27 @@
+/* ALUMNO 8 - Nosotros + Testimonios. Usa SOLO clases que empiecen con .a8- */
+.a8-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: center; }
+.a8-imagen img { border-radius: var(--radio); width: 100%; aspect-ratio: 8 / 9; object-fit: cover; }
+.a8-eyebrow { font-size: .8rem; letter-spacing: 4px; text-transform: uppercase; color: var(--acento); font-weight: 600; }
+.a8-texto h2 { font-family: var(--fuente-titulo); font-size: clamp(1.9rem, 3.5vw, 2.8rem); line-height: 1.15; margin: 8px 0 18px; }
+.a8-texto p { color: var(--gris); margin-bottom: 14px; }
+.a8-texto p strong { color: var(--negro); }
+.a8-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 28px; }
+.a8-stat { border-left: 3px solid var(--acento); padding-left: 14px; }
+.a8-stat strong { display: block; font-family: var(--fuente-titulo); font-size: 2.4rem; line-height: 1.1; }
+.a8-stat span { font-size: .85rem; color: var(--gris); }
+
+/* Testimonios */
+.a8-testimonios { background: var(--crema); }
+.a8-carrusel { max-width: 700px; margin: 0 auto; min-height: 270px; }
+.a8-testimonio { display: none; text-align: center; }
+.a8-testimonio.activo { display: block; animation: a8-aparecer .6s; }
+.a8-testimonio img { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; margin: 0 auto 12px; border: 3px solid #fff; }
+.a8-estrellas { color: #f2b01e; font-size: 1.2rem; letter-spacing: 2px; }
+.a8-comentario { font-family: var(--fuente-titulo); font-style: italic; font-size: 1.25rem; margin: 12px 0 16px; }
+.a8-testimonio span { font-size: .85rem; color: var(--gris); }
+.a8-puntos { display: flex; justify-content: center; gap: 10px; margin-top: 20px; }
+.a8-puntos button { width: 12px; height: 12px; border-radius: 50%; border: 0; background: var(--beige); cursor: pointer; }
+.a8-puntos button.activo { background: var(--acento); }
+@keyframes a8-aparecer { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 850px) { .a8-grid { grid-template-columns: 1fr; gap: 30px; } }

@@ -1,0 +1,73 @@
+<!-- ======================= ALUMNO 1: HEADER + BANNER + CARRITO ======================= -->
+<div class="a1-anuncio">ENVÍO GRATIS EN COMPRAS DESDE S/ 150 · CAMBIOS HASTA 30 DÍAS</div>
+
+<header class="a1-header" id="inicio">
+  <div class="contenedor a1-nav">
+    <button class="a1-menu-btn" aria-label="Abrir menú">☰</button>
+
+    <!-- LOGO: cambia el nombre de la tienda (acuérdalo con el equipo) -->
+    <a href="#inicio" class="a1-logo">MODA<span>Urbana</span></a>
+
+    <nav class="a1-links">
+      <a href="#hombre">Hombre</a>
+      <a href="#mujer">Mujer</a>
+      <a href="#ninos">Niños</a>
+      <a href="#accesorios">Accesorios</a>
+      <a href="#ofertas" class="a1-rojo">Ofertas</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <button class="a1-carrito-btn" aria-label="Ver carrito">🛍️<span class="a1-contador" id="a1-contador">0</span></button>
+  </div>
+</header>
+
+<!-- Panel lateral del carrito (se abre con el botón 🛍️) -->
+<aside class="a1-panel" id="a1-panel">
+  <div class="a1-panel-cabecera">
+    <h3>Tu carrito</h3>
+    <button class="a1-cerrar" aria-label="Cerrar">✕</button>
+  </div>
+  <ul class="a1-lista" id="a1-lista">
+    <li class="a1-vacio">Tu carrito está vacío</li>
+  </ul>
+  <div class="a1-total">Total: <strong id="a1-total">S/ 0.00</strong></div>
+  <a href="#contacto" class="btn a1-comprar">Finalizar compra</a>
+</aside>
+
+<!-- BANNER DESLIZANTE: cada .a1-slide es una imagen con su texto -->
+<section class="a1-banner">
+  <div class="a1-slide activo">
+    <img src="img/alumno1/banner1.svg" alt="Nueva colección">
+    <div class="a1-texto">
+      <p class="a1-mini">NUEVA COLECCIÓN 2026</p>
+      <h1>Estilo que<br>habla por ti</h1>
+      <p>Descubre las prendas de la temporada para hombre, mujer y niños.</p>
+      <a href="#hombre" class="btn btn-claro">Comprar ahora</a>
+    </div>
+  </div>
+
+  <div class="a1-slide">
+    <img src="img/alumno1/banner2.svg" alt="Colección mujer">
+    <div class="a1-texto">
+      <p class="a1-mini">COLECCIÓN MUJER</p>
+      <h1>Elegancia<br>para cada día</h1>
+      <p>Vestidos, blusas y jeans que combinan con todo.</p>
+      <a href="#mujer" class="btn btn-claro">Ver colección</a>
+    </div>
+  </div>
+
+  <div class="a1-slide">
+    <img src="img/alumno1/banner3.svg" alt="Ofertas">
+    <div class="a1-texto">
+      <p class="a1-mini">SOLO POR TIEMPO LIMITADO</p>
+      <h1>Hasta 50%<br>de descuento</h1>
+      <p>Aprovecha nuestras ofertas antes de que se acaben.</p>
+      <a href="#ofertas" class="btn btn-claro">Ver ofertas</a>
+    </div>
+  </div>
+
+  <button class="a1-flecha a1-prev" aria-label="Anterior">‹</button>
+  <button class="a1-flecha a1-next" aria-label="Siguiente">›</button>
+  <div class="a1-puntos"></div>
+</section>

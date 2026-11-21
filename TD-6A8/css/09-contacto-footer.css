@@ -1,0 +1,44 @@
+/* ALUMNO 9 - Contacto + Newsletter + Footer. Usa SOLO clases que empiecen con .a9- */
+.a9-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; }
+.a9-info { display: flex; flex-direction: column; gap: 22px; }
+.a9-dato { display: flex; gap: 14px; align-items: flex-start; }
+.a9-dato > span { font-size: 1.5rem; width: 50px; height: 50px; border-radius: 50%; background: var(--crema); display: grid; place-items: center; flex-shrink: 0; }
+.a9-dato p { color: var(--gris); font-size: .9rem; }
+
+/* Formulario */
+.a9-form { background: var(--crema); padding: 30px; border-radius: var(--radio); display: flex; flex-direction: column; gap: 14px; }
+.a9-form label { display: flex; flex-direction: column; gap: 6px; font-size: .85rem; font-weight: 500; }
+.a9-form input, .a9-form select, .a9-form textarea { padding: 12px 14px; border: 1px solid var(--borde); border-radius: 8px; font-size: .95rem; background: #fff; }
+.a9-form input:focus, .a9-form select:focus, .a9-form textarea:focus { outline: 2px solid var(--acento); border-color: transparent; }
+.a9-form .btn { align-self: flex-start; }
+.a9-error { color: var(--rojo); font-size: .85rem; min-height: 1.2em; }
+
+/* Newsletter */
+.a9-newsletter { background: var(--acento); color: #fff; padding: 46px 0; }
+.a9-newsletter-caja { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.a9-newsletter h3 { font-family: var(--fuente-titulo); font-size: 1.8rem; }
+.a9-suscribir { display: flex; gap: 10px; flex-wrap: wrap; }
+.a9-suscribir input { padding: 12px 18px; border-radius: 999px; border: 0; min-width: 260px; }
+
+/* Footer */
+.a9-footer { background: var(--negro); color: #d6d6d6; padding: 60px 0 20px; }
+.a9-footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 30px; }
+.a9-footer h4 { color: #fff; margin-bottom: 12px; }
+.a9-footer-grid > div > a { display: block; font-size: .9rem; margin-bottom: 8px; transition: .2s; }
+.a9-footer-grid a:hover { color: var(--acento); }
+.a9-logo { font-family: var(--fuente-titulo); font-size: 1.6rem; color: #fff; font-weight: 700; letter-spacing: 2px; }
+.a9-logo span { color: var(--acento); font-style: italic; margin-left: 6px; }
+.a9-descripcion { font-size: .9rem; margin: 10px 0 16px; }
+.a9-redes { display: flex; gap: 14px; font-size: .85rem; }
+.a9-pagos { display: flex; flex-wrap: wrap; gap: 8px; }
+.a9-pagos span { background: #fff; color: var(--negro); font-size: .75rem; font-weight: 700; padding: 6px 10px; border-radius: 6px; }
+.a9-copy { text-align: center; font-size: .8rem; margin-top: 40px; padding-top: 20px; border-top: 1px solid #2b2b2b; }
+
+/* Botón flotante WhatsApp */
+.a9-whatsapp { position: fixed; right: 22px; bottom: 22px; width: 58px; height: 58px; border-radius: 50%; background: var(--verde); display: grid; place-items: center; font-size: 1.7rem; box-shadow: 0 8px 20px rgba(0, 0, 0, .25); z-index: 90; transition: .2s; }
+.a9-whatsapp:hover { transform: scale(1.1); }
+
+@media (max-width: 850px) {
+  .a9-grid { grid-template-columns: 1fr; }
+  .a9-footer-grid { grid-template-columns: 1fr 1fr; }
+}

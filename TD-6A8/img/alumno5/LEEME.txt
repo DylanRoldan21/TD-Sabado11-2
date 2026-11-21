@@ -1,0 +1,5 @@
+Carpeta de imágenes del ALUMNO 5.
+1. Guarda aquí tus fotos (.jpg, .png o .webp).
+2. Usa nombres en minúscula y sin espacios: polo-negro.jpg
+3. En tu HTML la ruta es: img/alumno5/nombre-de-tu-foto.jpg
+4. Puedes borrar los .svg de ejemplo cuando ya no los uses.

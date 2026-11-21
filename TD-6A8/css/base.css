@@ -1,0 +1,70 @@
+/* =====================================================================
+   BASE.CSS - NO TOCAR (profesor)
+   Colores, tipografías y clases que comparten TODAS las secciones.
+   Puedes USARLAS en tu HTML, pero no modificarlas aquí.
+   ===================================================================== */
+:root {
+  --negro: #111111;
+  --blanco: #ffffff;
+  --crema: #f6f1ea;
+  --beige: #e9dfd3;
+  --acento: #b08457;        /* camel / dorado */
+  --rojo: #d64545;
+  --verde: #25d366;         /* WhatsApp */
+  --gris: #6b6b6b;
+  --borde: #e5e5e5;
+  --radio: 12px;
+  --ancho: 1240px;
+  --fuente-titulo: 'Playfair Display', serif;
+  --fuente-texto: 'Poppins', system-ui, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--fuente-texto); color: var(--negro); background: var(--blanco); line-height: 1.6; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font-family: inherit; }
+
+/* ---------- Estructura ---------- */
+.contenedor { width: min(var(--ancho), 92%); margin: 0 auto; }
+.seccion { padding: 80px 0; scroll-margin-top: 70px; }
+
+/* ---------- Títulos ---------- */
+.eyebrow { font-size: .8rem; letter-spacing: 4px; text-transform: uppercase; color: var(--acento); text-align: center; font-weight: 600; }
+.titulo-seccion { font-family: var(--fuente-titulo); font-size: clamp(2rem, 4vw, 3rem); text-align: center; margin: 6px 0; line-height: 1.15; }
+.subtitulo-seccion { text-align: center; color: var(--gris); max-width: 620px; margin: 0 auto 40px; }
+
+/* ---------- Botones ---------- */
+.btn { display: inline-block; background: var(--negro); color: var(--blanco); padding: 12px 28px; border: 2px solid var(--negro); border-radius: 999px; font-weight: 600; font-size: .9rem; letter-spacing: 1px; cursor: pointer; transition: .25s; }
+.btn:hover { background: transparent; color: var(--negro); }
+.btn-borde { background: transparent; color: var(--negro); }
+.btn-borde:hover { background: var(--negro); color: var(--blanco); }
+.btn-claro { background: var(--blanco); color: var(--negro); border-color: var(--blanco); }
+.btn-claro:hover { background: transparent; color: var(--blanco); }
+
+/* ---------- Filtros (botones de categoría) ---------- */
+.filtros { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+.filtro { padding: 8px 20px; border: 1px solid var(--borde); border-radius: 999px; background: var(--blanco); cursor: pointer; font-size: .85rem; transition: .2s; }
+.filtro:hover { border-color: var(--negro); }
+.filtro.activo { background: var(--negro); color: var(--blanco); border-color: var(--negro); }
+
+/* ---------- Tarjeta de producto ---------- */
+.grid-productos { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 24px; }
+.producto { background: var(--blanco); border-radius: var(--radio); overflow: hidden; border: 1px solid var(--borde); transition: .25s; display: flex; flex-direction: column; }
+.producto:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0, 0, 0, .08); }
+.producto.oculto { display: none; }
+.producto-foto { position: relative; aspect-ratio: 4 / 5; background: var(--crema); overflow: hidden; }
+.producto-foto img { width: 100%; height: 100%; object-fit: cover; transition: .4s; }
+.producto:hover .producto-foto img { transform: scale(1.05); }
+.producto-etiqueta { position: absolute; top: 12px; left: 12px; background: var(--negro); color: var(--blanco); font-size: .7rem; font-weight: 600; padding: 4px 10px; border-radius: 999px; letter-spacing: 1px; }
+.producto-info { padding: 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.producto-nombre { font-size: 1rem; font-weight: 600; line-height: 1.3; }
+.producto-precio { font-weight: 700; color: var(--acento); }
+.btn-agregar { margin-top: auto; padding: 10px; border: 1px solid var(--negro); background: var(--negro); color: var(--blanco); border-radius: 8px; cursor: pointer; font-weight: 500; transition: .2s; }
+.btn-agregar:hover { background: var(--blanco); color: var(--negro); }
+.btn-agregar:disabled { opacity: .5; cursor: not-allowed; }
+
+/* ---------- Mensaje flotante (toast) ---------- */
+.toast { position: fixed; bottom: 24px; left: 50%; transform: translate(-50%, 140px); background: var(--negro); color: var(--blanco); padding: 12px 24px; border-radius: 999px; z-index: 999; transition: .35s; font-size: .9rem; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+.toast.visible { transform: translate(-50%, 0); }

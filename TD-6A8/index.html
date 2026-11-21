@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moda Urbana | Tienda de ropa</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- BASE: NO TOCAR (profesor) -->
+  <link rel="stylesheet" href="css/base.css">
+
+  <!-- Un CSS por alumno: cada alumno edita SOLO el suyo -->
+  <link rel="stylesheet" href="css/01-header-banner.css">
+  <link rel="stylesheet" href="css/02-categorias.css">
+  <link rel="stylesheet" href="css/03-hombre.css">
+  <link rel="stylesheet" href="css/04-mujer.css">
+  <link rel="stylesheet" href="css/05-ninos.css">
+  <link rel="stylesheet" href="css/06-accesorios.css">
+  <link rel="stylesheet" href="css/07-ofertas.css">
+  <link rel="stylesheet" href="css/08-nosotros.css">
+  <link rel="stylesheet" href="css/09-contacto-footer.css">
+</head>
+<body>
+  <!--
+    ESTE ARCHIVO NO SE EDITA.
+    Cada <div data-include> carga una sección de la carpeta /secciones.
+  -->
+  <div data-include="secciones/01-header-banner.html"></div>   <!-- Alumno 1 -->
+  <main>
+    <div data-include="secciones/02-categorias.html"></div>    <!-- Alumno 2 -->
+    <div data-include="secciones/03-hombre.html"></div>        <!-- Alumno 3 -->
+    <div data-include="secciones/04-mujer.html"></div>         <!-- Alumno 4 -->
+    <div data-include="secciones/05-ninos.html"></div>         <!-- Alumno 5 -->
+    <div data-include="secciones/06-accesorios.html"></div>    <!-- Alumno 6 -->
+    <div data-include="secciones/07-ofertas.html"></div>       <!-- Alumno 7 -->
+    <div data-include="secciones/08-nosotros.html"></div>      <!-- Alumno 8 -->
+  </main>
+  <div data-include="secciones/09-contacto-footer.html"></div> <!-- Alumno 9 -->
+
+  <!-- NO TOCAR: carrito compartido y cargador de secciones -->
+  <script src="js/tienda.js"></script>
+  <script src="js/include.js"></script>
+</body>
+</html>

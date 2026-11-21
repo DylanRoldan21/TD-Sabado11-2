@@ -1,0 +1,19 @@
+/* ALUMNO 7 - Ofertas. Usa SOLO clases que empiecen con .a7- */
+.a7-seccion { background: var(--negro); color: #fff; }
+.a7-seccion .eyebrow { color: var(--rojo); }
+.a7-seccion .subtitulo-seccion { color: #bdbdbd; }
+.a7-seccion .producto { color: var(--negro); border: 0; }
+
+/* Cuenta regresiva */
+.a7-contador { display: flex; justify-content: center; gap: 12px; margin-bottom: 44px; }
+.a7-contador div { background: var(--rojo); border-radius: 10px; padding: 12px 16px; min-width: 78px; text-align: center; }
+.a7-contador span { display: block; font-size: 1.9rem; font-weight: 700; line-height: 1.2; }
+.a7-contador small { font-size: .7rem; letter-spacing: 2px; text-transform: uppercase; }
+
+/* Precios y descuento */
+.a7-descuento { position: absolute; top: 12px; right: 12px; background: var(--rojo); color: #fff; font-weight: 700; padding: 6px 12px; border-radius: 999px; font-size: .85rem; }
+.a7-precios { display: flex; gap: 10px; align-items: baseline; }
+.a7-ahora { color: var(--rojo); font-weight: 700; font-size: 1.15rem; }
+.a7-antes { text-decoration: line-through; color: var(--gris); font-size: .85rem; }
+.a7-seccion .btn-agregar { background: var(--rojo); border-color: var(--rojo); }
+.a7-seccion .btn-agregar:hover { background: #fff; color: var(--rojo); }

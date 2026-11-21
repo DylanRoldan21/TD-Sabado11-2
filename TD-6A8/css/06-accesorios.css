@@ -1,0 +1,7 @@
+/* ALUMNO 6 - Accesorios y calzado. Usa SOLO clases que empiecen con .a6- */
+.a6-seccion { background: var(--blanco); }
+.a6-barra { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 30px; }
+.a6-barra .filtros { margin: 0; justify-content: flex-start; }
+.a6-orden { display: flex; align-items: center; gap: 14px; }
+.a6-orden select { padding: 9px 14px; border: 1px solid var(--borde); border-radius: 8px; background: #fff; cursor: pointer; }
+.a6-cantidad { color: var(--gris); font-size: .85rem; }
